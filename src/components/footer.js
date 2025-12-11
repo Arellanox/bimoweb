@@ -102,11 +102,11 @@ const Footer = () => {
                                             <i class='bx bxl-instagram-alt bx-tada-hover'></i>
                                         </a>
                                     </li>
-                                    {/* <li class="list-inline-item ">
-                                        <a href="" className='text-light'>
+                                    <li class="list-inline-item ">
+                                        <a href="https://wa.me/529932154479" className='text-light' target='parent'>
                                             <i class='bx bxl-whatsapp bx-tada-hover' ></i>
                                         </a>
-                                    </li> */}
+                                    </li>
                                 </ul>
                             </li>
 
@@ -118,7 +118,7 @@ const Footer = () => {
                 <div class="border-top py-4">
                     <div class="row">
                         <div class="col-lg-6 col-md-12 text-light">
-                            <small> © 2023 BIMO todos los derecho reservados</small>
+                            <small> © {new Date().getFullYear()} BIMO todos los derecho reservados</small>
                         </div>
                         {/* <div class="col-lg-6 col-md-12">
                             <ul class="list-unstyled text-lg-end">

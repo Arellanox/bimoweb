@@ -41,6 +41,16 @@ const Navbar = () => {
         };
     }, []);
 
+    useEffect(() => {
+        // Initialize Bootstrap tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        if (window.bootstrap) {
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new window.bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        }
+    }, []);
+
 
     return (
         <div>
@@ -77,6 +87,9 @@ const Navbar = () => {
                             </li>
                             <li class="nav-item fw-bold ">
                                 <Link onClick={scrollToTop} to="/Contacto" class="nav-link active" href="#">Contacto +</Link>
+                            </li>
+                            <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/Promociones" class="nav-link active" href="#">Promociones +</Link>
                             </li>
                             <li className="nav-item fw-bold">
                                 <a href="https://bimo.com.mx/blog/" className="nav-link active" target="_blank" rel="noopener noreferrer">
@@ -136,19 +149,34 @@ const Navbar = () => {
                 </div> */}
             </div>
 
-            <div className='btn--float btn-float-show h-100' id='btn-float'>
+            <div className='btn--float btn-float-show h-100 ' id='btn-float'>
                 <motion.div
                     onClick={scrollToTop}
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{ scale: 1.09 }}
                     whileTap={{
                         scale: 0.8,
                         rotate: -90,
-                        borderRadius: "100%"
+                        borderRadius: "100%",
+                        translateY: "-5px",
+                        transition: {
+                            duration: 0.2
+                        }
                     }}>
                     <motion.button
-                        className='btn shadow text-light'><i class="fa-solid fa-arrow-up"></i>
+                        className='btn shadow text-light' style={{ width: "50px", height: "50px", borderRadius: "30%", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)" }}><i class="fa-solid fa-arrow-up"></i>
                     </motion.button>
                 </motion.div>
+            </div>
+
+            <div style={{ position: "fixed", bottom: "5vh", right: "5vh", zIndex: "1000" }} >
+                <a href="https://wa.me/9932327502" target="_blank" className='btn float-hover'
+                    data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Cotiza con Mati nuestro asistente virtual"
+                    style={{
+                        width: "50px", height: "50px", borderRadius: "30%", display: "flex", alignItems: "center", justifyContent: "center",
+                        boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)", backgroundColor: "var(--pantone-7408-color)", color: "white"
+                    }}>
+                    <i className="bi bi-whatsapp"></i>
+                </a>
             </div>
         </div >
     )

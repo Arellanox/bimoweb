@@ -19,13 +19,12 @@
     "react-intersection-observer": "^9.5.2",
     "react-loader-spinner": "^5.4.5",
     "react-router-dom": "^6.15.0",
-    "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-spinners": "^0.13.8",
     "react-toastify": "^9.1.3",
     "web-vitals": "^2.1.4"
   },
-  "homepage":"http://bimo.com.mx/",
+  "homepage": "http://bimo.com.mx/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -51,6 +50,8 @@
     ]
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.18"
-  }
+    "@types/jquery": "^3.5.18",
+    "react-scripts": "^5.0.1"
+  },
+  "proxy": "https://bimo-lab.com"
 }

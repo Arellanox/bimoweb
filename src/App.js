@@ -15,6 +15,7 @@ import Home from "./pages/home";
 import Politica from "./pages/politica";
 import Radiografia from "./pages/landing-radiografia";
 import PageView from "./components/pageView";
+import Promociones from "./pages/promociones";
 
 
 function App() {
@@ -25,11 +26,12 @@ function App() {
         {/* <PageView> */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="Contacto" element={<Contacto />} />
-          <Route path="Nosotros" element={<Nosotros />} />
-          <Route path="Servicios" element={<Servicios />} />
-          <Route path="Privacidad" element={<Politica />} />
+          <Route path="contacto" element={<Contacto />} />
+          <Route path="nosotros" element={<Nosotros />} />
+          <Route path="servicios" element={<Servicios />} />
+          <Route path="privacidad" element={<Politica />} />
           <Route path="quiero-una-radiografia" element={<Radiografia />} />
+          <Route path="promociones" element={<Promociones />} />
         </Route>
         <Route path="*" />
         {/* </PageView> */}

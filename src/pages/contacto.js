@@ -31,15 +31,6 @@ const Contacto = () => {
     // }, [])
     // $(document).on('submit',)
 
-    useEffect(() => {
-        if (typeof window.gtag !== "undefined") {
-            window.gtag('event', 'conversion', {
-                'send_to': 'AW-17782563411/XXXXXXXXXXX'
-            });
-            console.log("Conversión enviada: página Contacto");
-        }
-    }, []);
-
     const [formData, setFormData] = useState({
         nombre: '',
         telefono: '',
@@ -334,6 +325,8 @@ const Contacto = () => {
 
                         </motion.div>
                     </div>
+
+                    
                 </div>
             </section >
         </>
