@@ -135,6 +135,12 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/Promociones" class="nav-link active" href="#">
+                                    <i class="bi bi-file-earmark-text-fill me-2"></i>
+                                    Promociones
+                                </Link>
+                            </li>
+                            <li class="nav-item fw-bold ">
                                 <Link onClick={scrollToTop} to="/Contacto" class="nav-link active" href="#">
                                     <i class="bi bi-envelope-fill me-2"></i>
                                     Contacto

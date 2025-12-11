@@ -16,7 +16,7 @@ const Promociones = () => {
             const formData = new FormData();
             formData.append('api', 2);
 
-            axios.post('/nuevo_checkup/api/promociones_api.php', formData).then((response) => {
+            axios.post('https://bimo-lab.com/nuevo_checkup/api/promociones_api.php', formData).then((response) => {
                 setPromociones(response.data.response.data);
                 console.log(response.data.response.data);
             }).catch((error) => {
