@@ -42,7 +42,6 @@ const Promociones = () => {
                     <h3 className='text-center text-pantone' style={{
                         fontSize: "1.25rem"
                     }}>Conoce las promociones que tenemos para ti <span style={{ color: "#ff0808ff" }}>*</span> </h3>
-
                 </div>
             </div>
             <section>

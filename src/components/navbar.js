@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const [showWhatsappHint, setShowWhatsappHint] = useState(true);
+
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
         const scrollThreshold = 200;
@@ -174,8 +176,43 @@ const Navbar = () => {
                 </motion.div>
             </div>
 
-            <div style={{ position: "fixed", bottom: "5vh", right: "5vh", zIndex: "1000" }} >
-                <a href="https://wa.me/9932327502" target="_blank" className='btn float-hover'
+            <div style={{ position: "fixed", bottom: "5vh", right: "5vh", zIndex: "1000", display: "flex", alignItems: "center", gap: "10px" }} >
+                {showWhatsappHint && (
+                    <div className="animate__animated animate__fadeInLeft" style={{
+                        backgroundColor: "white",
+                        color: "var(--pantone-7408-color)",
+                        padding: "8px 15px",
+                        borderRadius: "15px 15px 0 15px",
+                        boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+                        fontSize: "0.9rem",
+                        fontWeight: "bold",
+                        position: "relative",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px"
+                    }}>
+                        Cotiza aquí
+                        <button
+                            onClick={() => setShowWhatsappHint(false)}
+                            style={{
+                                border: "none",
+                                background: "transparent",
+                                padding: "0",
+                                display: "flex",
+                                alignItems: "center",
+                                color: "#999",
+                                cursor: "pointer",
+                                fontSize: "14px"
+                            }}
+                        >
+                            <i className="bi bi-x-circle-fill"></i>
+                        </button>
+                    </div>
+                )}
+                <a href="https://wa.me/9932327502?text=Hola%20quiero%20realizar%20una%20cotizacion"
+                    target="_blank"
+                    className='btn float-hover'
+                    onClick={() => setShowWhatsappHint(false)}
                     data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Cotiza con Mati nuestro asistente virtual"
                     style={{
                         width: "50px", height: "50px", borderRadius: "30%", display: "flex", alignItems: "center", justifyContent: "center",
