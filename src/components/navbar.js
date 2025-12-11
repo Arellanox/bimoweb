@@ -1,0 +1,157 @@
+import { motion } from 'framer-motion';
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        const scrollThreshold = 200;
+        const targetElement = document.getElementById("navbar--main");
+        const btnfloat = document.getElementById("btn-float");
+
+        if (scrollPosition > scrollThreshold) {
+            targetElement.classList.add("bg--navbar--after");
+            btnfloat.classList.add("btn-float-hide")
+        } else {
+            targetElement.classList.remove("bg--navbar--after");
+            btnfloat.classList.remove("btn-float-hide")
+
+        }
+    };
+
+
+    function scrollToTop() {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+            document.getElementById('btn--close').click()
+        }, 350)
+    }
+
+    useEffect(() => {
+        // scrollToTop()
+        window.addEventListener("scroll", handleScroll);
+
+        // Limpieza del efecto para remover el event listener
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+
+    return (
+        <div>
+            <nav class="navbar navbar-expand-sm navbar-dark" id="navbar--main">
+                <div class="container-fluid px-5">
+                    <Link to="/" onClick={scrollToTop} class="navbar-brand logo fw-bold" style={{ fontSize: "30px" }} href="#">
+
+                        <img src="assets/img/logo_blanco_sinfondo.png" style={{ width: "18vh" }} className='img-fluid' alt="" />
+                    </Link>
+                    {/* <button class="navbar-toggler d-lg-none" id='btn-bootstrap' type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> */}
+                    <motion.div className=' text-light' id='btn--navbar' data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                        whileHover={{
+                            scale: 1.3
+                        }}
+                        style={{
+                            fontSize: "30px"
+                        }}>
+                        <i class="bi bi-list"></i>
+                    </motion.div>
+                    <div class="collapse navbar-collapse  " id="collapsibleNavId">
+                        <ul class="navbar-nav ms-auto gap-4 ">
+                            <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/" class="nav-link active" href="#competencias">Inicio +</Link>
+                            </li>
+                            <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/Nosotros" class="nav-link active" href="#">Nosotros +</Link>
+                            </li>
+                            <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/Servicios" class="nav-link active" href="#">Servicios +</Link>
+                            </li>
+                            <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/Contacto" class="nav-link active" href="#">Contacto +</Link>
+                            </li>
+                            <li className="nav-item fw-bold">
+                                <a href="https://bimo.com.mx/blog/" className="nav-link active" target="_blank" rel="noopener noreferrer">
+                                    Blog +
+                                </a>
+                            </li>
+                        </ul>
+                        {/* <ul class="navbar-nav ">
+                            <button className='btn btn-login'>Login</button>
+                        </ul> */}
+                    </div>
+                </div>
+            </nav>
+
+            <div class="offcanvas offcanvas-end bg-bimo text-light" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{
+                width: "35vh"
+            }}>
+                <div class="offcanvas-header d-flex justify-content-center offcanvas--head">
+                    {/* <h5 class="offcanvas-title" id="offcanvasExampleLabel">BIMO</h5> */}
+                    <img src="assets/img/logo_blanco_sinfondo.png" style={{ width: "15vh" }} className='img-fluid' alt="" />
+                    <button type="button" id='btn--close' class="btn-close text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <hr className='m-0' />
+                <div class="offcanvas-body">
+                    <div>
+                        <ul class="navbar-nav mx-auto gap-1 ">
+                            <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/" class="nav-link active" href="#competencias">
+                                    <i class="bi bi-house-door-fill me-2"></i>
+                                    Inicio
+                                </Link>
+                            </li>
+                            <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/Nosotros" class="nav-link active" href="#">
+                                    <i class="bi bi-book-fill me-2"></i>
+                                    Nosotros
+                                </Link>
+                            </li>
+                            <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/Servicios" class="nav-link active" href="#">
+                                    <i class="bi bi-file-earmark-text-fill me-2"></i>
+                                    Servicios
+                                </Link>
+                            </li>
+                            <li class="nav-item fw-bold ">
+                                <Link onClick={scrollToTop} to="/Contacto" class="nav-link active" href="#">
+                                    <i class="bi bi-envelope-fill me-2"></i>
+                                    Contacto
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {/* <hr className='m-0 p-0' /> */}
+                {/* <div className='d-flex justify-content-center py-3  offcanvas--footer'>
+
+                </div> */}
+            </div>
+
+            <div className='btn--float btn-float-show h-100' id='btn-float'>
+                <motion.div
+                    onClick={scrollToTop}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{
+                        scale: 0.8,
+                        rotate: -90,
+                        borderRadius: "100%"
+                    }}>
+                    <motion.button
+                        className='btn shadow text-light'><i class="fa-solid fa-arrow-up"></i>
+                    </motion.button>
+                </motion.div>
+            </div>
+        </div >
+    )
+}
+
+export default Navbar

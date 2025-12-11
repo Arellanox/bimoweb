@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:ital,wght@1,300;1,700;1,900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/gotham');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:ital,wght@0,100;0,300;1,100&family=Rubik:ital,wght@0,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark: #18191A;
+    --dark-second: #242526;
+    --silver-dark: #3A3B3C;
+    --Color-primary: #00afaa;
+    --Color-second: #00afaa;
+    --Color-body: #004f5a;
+    --color-nose:#ffaf1e;
+    --grey: #f5f5f5;
+}
+
+.text-red {
+    color: var(--Color-primary);
+}
+
+.tittle {
+    color: #fff;
+    font-size: 34px;
+}
+
+/*===============================Estilos Bootstrap====================================================*/
+
+
+/* Estilo general para el scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Ancho del scrollbar vertical */
+    height: 8px;
+    /* Altura del scrollbar horizontal */
+    background: #f6fdff;
+    /* Color de fondo del track (la parte por donde se desplaza el pulgar) */
+}
+
+/* Pulgar (la parte móvil) del scrollbar vertical */
+::-webkit-scrollbar-thumb:vertical {
+    background: rgb(216, 223, 225);
+    /* Color de fondo del pulgar vertical */
+    border-radius: 4px;
+    /* Redondeo de las esquinas */
+}
+
+/* Pulgar (la parte móvil) del scrollbar horizontal */
+::-webkit-scrollbar-thumb:horizontal {
+    background: rgb(216, 223, 225);
+    /* Color de fondo del pulgar horizontal */
+    border-radius: 4px;
+    /* Redondeo de las esquinas */
+}
+
+/* Hover sobre el pulgar (para dar feedback al usuario) */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(196, 203, 205);
+    /* Oscurecemos un poco el color al pasar el ratón por encima */
+}
+
+/* Botones (arriba, abajo, izquierda, derecha). En este caso, los escondemos para un diseño más minimalista */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Track (la parte por donde se desplaza el pulgar) */
+::-webkit-scrollbar-track {
+    background: #f6fdff;
+    border-radius: 4px;
+    /* Redondeo de las esquinas */
+}
+
+#body {
+    /* font-family: 'Gotham', sans-serif; */
+    /* font-family: 'DM Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;  
+    margin: 0;
+    padding: 0;
+    background-color: #fff !important;
+}
+
+#body .navbar {
+    min-height: 90px;
+}
+
+section {
+    height: 140vh;
+}
+
+.hero--img{
+    background-image: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url("img/Imagen22.jpg");
+        background-repeat: none;
+        background-size: cover;
+        /* background-position: fixed; */
+        background-position: center center;
+}
+
+.text-video{
+    padding-top: 300px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;   
+}
+
+        .hero--video {   
+        background-color: rgba(0, 0, 0, 0.4 );
+        position: relative;
+        width: 100%;
+        max-height: 1080px;
+        overflow: hidden;
+    }
+    
+    .hero--video video {
+    position: relative;
+        z-index: -1;
+    }
+
+
+
+.color--punto{
+    color: var(--Color-body);
+}
+.color--punto-2{
+    color: var(--color-nose);
+}
+
+#hero .bg-bimo  {
+    background-color: var(--color-nose) !important;
+}
+
+#body .bg--navbar--after{
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    background-color:var(--Color-body) ;
+    transition: all 0.5s ease;
+}
+
+#body nav{
+    z-index: 99 !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: all 0.5s ease;
+}
+
+#body .logo{
+    /* font-family: 'Jacques Francois', serif !important; */
+}
+
+#body .text--title-1{
+    font-weight: bold;
+    /* font-family: 'Jacques Francois', serif !important; */
+    font-size: 80px;
+}
+#body .text--title-2{
+    font-family: 'DM Sans', sans-serif;
+    /* font-family: 'Jacques Francois', serif !important; */
+    font-size: 48px;
+}
+
+#body .subtitle-1{
+    font-size: 18px;
+}
+
+/* .body--competencias .col-lg{
+    max-width: 248px !important;
+} */
+
+.body--competencias h3{
+    color: #f6fdff  ;
+    text-align: center;
+    position: relative;
+        display: block;
+        font-size: 20px;
+        line-height: 34px;
+        font-weight: 800;
+        margin-bottom: 27px;
+}
+
+.card--title{
+    /* border: 1px solid black; */
+    display: flex;
+    align-self: center;
+    align-content: center;
+    align-items: center ;
+    height: 200px;
+    max-height: 200px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f5f5f5;
+    font-weight: 600 !important;
+    font-size: 1.75rem  !important;
+}
+
+.card--body {
+    display: none;
+    max-height: 200px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+}   
+
+.card--footer a{
+    font-weight: bold  !important;
+    text-decoration: none;
+    color: var(--color-nose);
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.card--footer a:hover {
+    color: var(--color-nose) !important;
+}
+
+.cards{
+    height:500px;
+    max-height:500px;
+}
+
+
+.card--bg{
+background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.7   ),
+            rgba(0, 0, 0, 0.7   )), url("img/rxxrr.jpg");
+    background-repeat: none;
+    background-size: cover;
+    /* background-position: fixed; */
+    background-position: center center;
+    border-radius: 15px;
+}
+
+.card--bg2{
+    background-image: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)), url("img/IMG_9973.jpg");
+        background-repeat: none;
+        background-size: cover;
+        /* background-position: fixed; */
+        background-position: center center;
+        border-radius: 15px;
+}
+
+.card--bg3 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url("img/Oftalmo\ 2.jpeg");
+    background-repeat: none;
+    background-size: cover;
+    /* background-position: fixed; */
+    background-position: center center;
+    border-radius: 15px;
+}
+
+.card--bg4 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url("img/IMG_9960\ \(2\).jpg");
+    background-repeat: none;
+    background-size: cover;
+    /* background-position: fixed; */
+    background-position: center center;
+    border-radius: 15px;
+}
+
+
+
+/* Competenciass */
+
+#competencias h1{
+    font-size: 70px;
+}
+
+#competencias .title--competencias{
+    position: relative;
+}
+
+#competencias h1.text-center::before{
+left: 50%;
+    transform: translateX(-50%);
+    margin-left: -29px;
+}
+
+#competencias h1.text-center::after{
+    left: 50%;
+        transform: translateX(-50%);
+        margin-left: 29px;
+}
+
+#competencias h1::after{
+    position: absolute;
+        content: '';
+        background: var(--color-nose);
+        width: 55px;
+        height: 2px;
+        left: 59px;
+        bottom: 0px;
+}
+
+#competencias h1::before{
+    position: absolute;
+        content: '';
+        background: var(--Color-primary);
+        width: 55px;
+        height: 2px;
+        left: 0px;
+        bottom: 0px;
+}
+
+#competencias .title2--competencias h3{
+    color: var(--Color-primary) !important; 
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#body .text-primary {
+    color: var(--Color-primary) !important;
+}
+
+#body .navbar .btn {
+    padding: .500rem 1.25rem !important;
+}
+
+#body .btn-primary {
+    border-color: var(--Color-primary);
+    background-color: var(--Color-primary) !important;
+}
+
+#body .btn-primary:hover {
+    background-color: var(--Color-primary) !important;
+}
+
+#body .bg-primary {
+    background-color: var(--Color-second) !important;
+}
+
+#hero .btn {
+    padding: .625rem !important;
+}
+
+#service .btn {
+    padding: .625rem !important;
+}
+
+#registro .btn {
+    padding: .625rem !important;
+}
+
+#registro .bg-primary {
+    background-color: var(--Color-primary) !important;
+}
+
+#service .bg-light {
+    background-color: var(--grey) !important;
+}
+
+#horario .bg-danger {
+    background-color: var(--Color-second) !important;
+}
+
+#hero .text-justify {
+    text-align: justify !important;
+}
+
+#body .nav-link {
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%) !important;
+}
+
+#body .nav-link::after {
+     content: "";
+    display: block;
+    background-color: var(--color-nose);
+    width: 100%;
+    margin-top: 3px;
+    height: 1px;
+    clip-path: var(--clippy) !important;
+    transition: clip-path .3s !important;
+}
+
+#body .nav-link:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0% 100%) !important;
+    color: var(--color-nose) !important;
+}
+
+#body .text-justify {
+    text-align: justify !important;
+}
+
+
+
+/* ============================================================================================= */
+
+
+
+#logros h3 {
+    max-width: 17ch;
+}
+
+#logros .link {
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%) !important;
+}
+
+#logros .link::after {
+    content: "";
+    display: block;
+    background-color: var(--Color-primary);
+    width: 100%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy) !important;
+    transition: clip-path .3s !important;
+}
+
+#logros .link:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0% 100%) !important;
+}
+
+
+#unete .link {
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%) !important;
+}
+
+#unete .link::after {
+    content: "";
+    display: block;
+    background-color: var(--Color-primary);
+    width: 48%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy) !important;
+    transition: clip-path .3s !important;
+}
+
+#unete .link:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0% 100%) !important;
+}
+
+
+#personas .bg-white {
+    background-color: #fff !important;
+}
+
+/*==============================================================================================*/
+#personas {
+    height: 1700px;
+}
+
+#spacing {
+    height: 900px !important;
+}
+
+#personas h3 {
+    padding-top: 100px;
+}
+
+#usuarios {
+    margin-bottom: 300px;
+}
+
+#datos {
+    height: 900px;
+}
+
+#logros {
+    height: 500px;
+}
+
+#service {
+    height: 500px;
+}
+
+
+.content {
+    max-width: 500px;
+}
+
+#horario {
+    height: 1200px;
+}
+
+#ubicacion {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 450px;
+}
+
+#ubicacion1 {
+    height: 700px;
+}
+
+#unete {
+    height: 1200px;
+}
+
+.bg-ubicacion {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/4.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-ubicacion-2 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/a4.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-ubicacion-3 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/a5.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-img {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/2.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-person {
+    height: 400px;
+    background-image:
+        url("../assets/IMG/e1.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-person1 {
+    height: 400px;
+    background-image:
+        url("../assets/IMG/e2.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-person2 {
+    height: 400px;
+    background-image:
+        url("../assets/IMG/e3.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-person3 {
+    height: 400px;
+    background-image:
+        url("../assets/IMG/e4.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.bg-section {
+    height: 1000px;
+    background-image:
+        url("../assets/IMG/bg.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+
+.img-content {
+    max-width: 400px;
+}
+
+.img-border {
+    border-radius: 30px;
+}
+
+.objetfit {
+    width: 500px;
+    height: 400px;
+
+}
+
+.step {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.step::after {
+    content: '';
+    border-right: 1px solid var(--dark);
+    height: 60px;
+    position: absolute;
+    top: 34px;
+    opacity: .2;
+}
+
+.call-to-action {
+    border-radius: 50px;
+}
+
+#unete .linka {
+    margin-bottom: 60px;
+}
+
+#unete .col-5 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+.horario {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/a1.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.horario2 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/a2.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.horario3 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/a3.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.horario4 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/a4.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: 40%;
+    border-radius: 20px;
+}
+
+.horario5 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/a5.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.horario6 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG/a6.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: 70%;
+    border-radius: 20px;
+}
+
+.horario7 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../assets/IMG//a7.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.cta-form {
+    max-width: 480px;
+}
+
+#cta-form .btn {
+    top: 18px;
+    right: 12px;
+}
+
+#cta-form .form-control {
+    min-height: 82px !important;
+}
+
+.img-container img {
+    width: 50px;
+    border-radius: 20%;
+}
+
+
+/*==========================================================================================*/
+
+@media (max-width: 992px) {
+ 
+}
+
+@media (max-width: 767px) {
+   
+}
+
+@media (max-width: 414px) {
+   
+}
+
+@media (max-width: 375px) {
+   
+}
