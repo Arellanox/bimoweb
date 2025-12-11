@@ -226,11 +226,17 @@ p {
     min-height: 90px;
 }
 
+.float-hover:hover {
+    transform: translateY(-5px);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
 .btn--float {
     right: 0;
     position: fixed;
     margin-right: 5vh;
-    margin-bottom: 5vh;
+    margin-bottom: 100px;
     z-index: 99 !important;
     transition: transform 0.5s ease;
 }
@@ -241,13 +247,12 @@ p {
     opacity: 1;
     background-color: var(--pantone-7408-color) !important;
     padding: 10px 15px;
+    
 }
 
 .btn--float button:hover {
     background-color: #eca828;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding-top: 15px !important;
+    
 }
 
 
@@ -736,7 +741,7 @@ main {
 } */
 
 .bg-welcome {
-     position: absolute;
+    position: absolute;
     width: 100%;
     height: 450px;
     /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/laboratorio/equipo_presentacion.gif); */
@@ -744,9 +749,9 @@ main {
     background-size: 100%;
     background-attachment: fixed;
     background-position: center;
-    background-position: fixed; 
+    background-position: fixed;
     background-position: top;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 
@@ -1087,7 +1092,7 @@ main {
 
 
 .bg-corazon-tabasqueño {
- background-image: linear-gradient(0deg,
+    background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)), url("../img/recuadros_bimo/recuadro_3.jpg");
 }
@@ -1128,7 +1133,7 @@ main {
     object-fit: cover;
 }
 
-.bg-serotonina{
+.bg-serotonina {
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)), url("../img/recuadros_bimo/recuadro_1.jpg");
@@ -1530,7 +1535,7 @@ footer {
         background-position-x: -13vh;
         background-position-y: 0vh;
     }
-    
+
     .bg-welcome {
         height: 400px;
         background-size: 175vh;
@@ -1550,7 +1555,7 @@ footer {
         left: 1vh;
     }
 
-    #welcome .header_welcome-video{
+    #welcome .header_welcome-video {
         margin-bottom: 12vh !important;
     }
 
